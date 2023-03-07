@@ -1,0 +1,186 @@
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+/* GLOBALES */
+:root{
+    --very-dark-gray:hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    --sm:11rem;
+    --md:18rem;
+    --l:24rem;
+    --lg:30rem;
+    --container-shadow:0 1px 4px rgba(146, 161, 176, 0.151);
+
+    font-size: 6.25%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-size: var(--md);
+
+    font-family: 'Rubik', sans-serif;
+    background-image: url(./images/pattern-bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 120%;
+}
+/* LAYOUT */
+main{
+    height: 98%;
+}
+.up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    height: 320rem;
+}
+.down{
+    height: calc(100vh - 320rem);
+    background-color: papayawhip;
+    border: solid 1px black;
+}
+/* COMPONENTES */
+.up__api{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -158rem;
+
+    min-width: 310rem;
+    max-width: 500rem;
+    width: 85%;
+    padding-top: 24rem;
+    height: 316rem;
+
+    background-color: whitesmoke;
+    border-radius: 12rem;
+    box-shadow: var(--container-shadow);
+}
+.up__infoBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24rem;
+}
+.up__search{
+    width: 100%;
+    height: 60rem;
+    padding: 12rem 16rem 12rem 16rem;
+    
+    color: var(--very-dark-gray);
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-size: var(--md);
+    
+    border-radius: 12rem;
+    border: none;
+    box-shadow: var(--container-shadow);
+}
+.up__search:focus{
+    outline: none;
+}
+.up__search:hover{
+    cursor: pointer;
+}
+.up__btn:hover{
+    cursor: pointer;
+    background-color: var(--very-dark-gray);
+}
+form{
+    position:relative;
+    width: 85%;
+    max-width: 500rem;
+    min-width: 310rem;
+}
+.up__btn{
+    position: absolute;
+    right: 0;
+
+    height: 100%;
+    width: 15%;
+
+    background-color: black;
+    border: none;
+    border-radius: 0 12rem 12rem 0;
+}
+/* TIPOGRAFIA */
+.up__title{
+    min-width: 310rem;
+    margin-top: 24rem;
+    margin-bottom: 24rem;
+
+    color: whitesmoke;
+    font-size: var(--lg);
+    font-weight: 500;
+}
+.up__infoTitle{
+
+    font-size: var(--sm);
+    color: var(--dark-gray);
+    font-weight: 700;
+    letter-spacing: 2rem;
+    margin-bottom: 8rem;
+}
+.up__infoData{
+    color: var(--very-dark-gray);
+    font-weight: 500;
+    font-size: var(--l);
+}
+/* ESTILOS */
+
+@media (min-width:1060px) {
+    body{
+        background-image: url(./images/pattern-bg-desktop.png);
+        background-size: 140%;
+    }
+    .up{
+        height: 280rem;
+    }
+    .up__api{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        bottom: -75rem;
+
+        min-width: 1099rem;
+        max-width: 1260rem;
+        width: 70%;
+        height: 150rem;
+        max-width: none;
+        padding: 36rem 0rem 36rem 0;
+    }
+    .up__infoBox{
+        align-items: start;
+
+        margin: 0;
+        min-width: 250rem;
+        height: 77rem;
+
+        padding-left: 40rem;
+        border-right: 1px solid hsl(0, 0%, 59%);
+    }
+    .up__infoBox:last-child{
+        border: none;
+    }
+    .up__infoData{
+        padding-right: 60rem;
+        padding-top: 12rem;
+    }
+    .up__infoTitle{
+        margin-bottom: 0rem;
+    }
+    .down{
+        height: calc(100vh - 280rem);
+    }
+}
