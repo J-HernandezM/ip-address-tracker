@@ -11,7 +11,12 @@
     --lg:30rem;
     --container-shadow:0 1px 4px rgba(146, 161, 176, 0.151);
 
+    --title-margin:24rem;
+    --title-height:36rem;
+    --search-height:60rem;
+
     font-size: 6.25%;
+    --margin-top:calc( (320rem - ( ( var(--title-margin) * 2 ) + var(--title-height) + var(--search-height))) / 4);;
 }
 *{
     box-sizing: border-box;
@@ -53,14 +58,13 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
-    bottom: -158rem;
 
     min-width: 310rem;
     max-width: 500rem;
     width: 85%;
-    padding-top: 24rem;
-    height: 316rem;
+    margin-top: var(--margin-top);
+    padding: 24rem 24rem 0 24rem;
+    height: fit-content;
 
     background-color: whitesmoke;
     border-radius: 12rem;
@@ -74,7 +78,7 @@ main{
 }
 .up__search{
     width: 100%;
-    height: 60rem;
+    height: var(--search-height);
     padding: 12rem 16rem 12rem 16rem;
     
     color: var(--very-dark-gray);
@@ -114,10 +118,12 @@ form{
     border-radius: 0 12rem 12rem 0;
 }
 /* TIPOGRAFIA */
+.isp{
+    text-align: center;
+}
 .up__title{
     min-width: 310rem;
-    margin-top: 24rem;
-    margin-bottom: 24rem;
+    margin: 24rem 0 24rem;
 
     color: whitesmoke;
     font-size: var(--lg);
@@ -131,6 +137,9 @@ form{
     letter-spacing: 2rem;
     margin-bottom: 8rem;
 }
+.ip{
+    word-break: break-all;
+}
 .up__infoData{
     color: var(--very-dark-gray);
     font-weight: 500;
@@ -139,6 +148,9 @@ form{
 /* ESTILOS */
 
 @media (min-width:1060px) {
+    :root{
+        --margin-top:calc( (320rem - ( ( var(--title-margin) * 2 ) + var(--title-height) + var(--search-height))) / 3);;
+    }
     body{
         background-image: url(./images/pattern-bg-desktop.png);
         background-size: 140%;
@@ -151,36 +163,37 @@ form{
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        bottom: -75rem;
 
         min-width: 1099rem;
         max-width: 1260rem;
         width: 70%;
-        height: 150rem;
+        height: fit-content;
         max-width: none;
-        padding: 36rem 0rem 36rem 0;
+        padding: 36rem 0rem 36rem;
     }
     .up__infoBox{
         align-items: start;
 
         margin: 0;
         min-width: 250rem;
-        height: 77rem;
-
-        padding-left: 40rem;
+        height: 100%;
+        padding-left:40rem;
         border-right: 1px solid hsl(0, 0%, 59%);
     }
     .up__infoBox:last-child{
         border: none;
     }
     .up__infoData{
-        padding-right: 60rem;
         padding-top: 12rem;
+        padding-right: 20rem;
     }
     .up__infoTitle{
         margin-bottom: 0rem;
     }
     .down{
         height: calc(100vh - 280rem);
+    }
+    .isp{
+        text-align: start;
     }
 }

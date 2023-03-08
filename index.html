@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <title>IP Address Tracker</title>
 
   <style>
@@ -16,9 +18,9 @@
   <main>
     <section class="up">
       <h1 class="up__title">IP Address Tracker</h1>
-      <form>
-        <input id="IP" type="text" class="up__search" placeholder="Search for any IP address or domain" required>
-        <button type="button" class="up__btn">
+      <form onsubmit="return false">
+        <input id="IP" type="text" class="up__search input" placeholder="Search for any IP address or domain" required>
+        <button type="button" class="up__btn btn">
           <img src="./images/icon-arrow.svg" alt="arrow icon">
         </button>
       </form>
@@ -26,24 +28,24 @@
       <div class="up__api">
         <div class="up__infoBox">
           <p class="up__infoTitle">IP ADDRESS</p>
-          <p class="up__infoData">192.212.174.101</p>
+          <p class="up__infoData ip">192.212.174.101</p>
         </div>
         <div class="up__infoBox">
           <p class="up__infoTitle">LOCATION</p>
-          <p class="up__infoData">Brooklyn, NY 10001</p>
+          <p class="up__infoData location">Brooklyn, NY 10001</p>
         </div>
         <div class="up__infoBox">
           <p class="up__infoTitle">TIMEZONE</p>
-          <p class="up__infoData">UTC -5:00</p>
+          <p class="up__infoData">UTC <span class="timezone">-5:00</span></p>
         </div>
         <div class="up__infoBox">
           <p class="up__infoTitle">ISP</p>
-          <p class="up__infoData">SpaceX Starlink</p>
+          <p class="up__infoData isp">SpaceX Starlink</p>
         </div>
       </div>
     </section>
     <section class="down">
-      <div class="down__api">
+      <div class="down__api" id="map">
 
       </div>
     </section>
