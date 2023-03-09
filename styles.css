@@ -63,8 +63,8 @@ main{
 }
 .down__location{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(50% - 28rem);
+    left: calc(50% - 23rem);
 }
 .up__api{
     position: relative;
@@ -154,6 +154,7 @@ form{
 }
 .ip{
     word-break: break-all;
+    text-align: center;
 }
 .up__infoData{
     color: var(--very-dark-gray);
@@ -208,7 +209,7 @@ form{
     .down{
         height: calc(100vh - 280rem);
     }
-    .isp{
+    .isp, .ip{
         text-align: start;
     }
 }
