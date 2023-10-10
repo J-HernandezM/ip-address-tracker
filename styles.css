@@ -5,18 +5,18 @@
     --very-dark-gray:hsl(0, 0%, 17%);
     --dark-gray: hsl(0, 0%, 59%);
 
-    --sm:11rem;
-    --md:18rem;
-    --l:24rem;
-    --lg:30rem;
+    --sm:11px;
+    --md:18px;
+    --l:24px;
+    --lg:30px;
     --container-shadow:0 1px 4px rgba(146, 161, 176, 0.151);
 
-    --title-margin:24rem;
-    --title-height:36rem;
-    --search-height:60rem;
+    --title-margin:24px;
+    --title-height:36px;
+    --search-height:60px;
 
-    font-size: 6.25%;
-    --margin-top:calc( (320rem - ( ( var(--title-margin) * 2 ) + var(--title-height) + var(--search-height))) / 4);;
+    /* font-size: 6.25%; */
+    --margin-top:calc( (320px - ( ( var(--title-margin) * 2 ) + var(--title-height) + var(--search-height))) / 4);;
 }
 *{
     box-sizing: border-box;
@@ -45,11 +45,11 @@ main{
     position: relative;
 
     width: 100%;
-    height: 320rem;
+    height: 320px;
 }
 .down{
     position: relative;
-    height: calc(100vh - 320rem);
+    height: calc(100vh - 320px);
     background-color: papayawhip;
     border: solid 1px black;
 }
@@ -63,8 +63,8 @@ main{
 }
 .down__location{
     position: absolute;
-    top: calc(50% - 28rem);
-    left: calc(50% - 23rem);
+    top: calc(50% - 28px);
+    left: calc(50% - 23px);
 }
 .up__api{
     position: relative;
@@ -74,34 +74,34 @@ main{
     align-items: center;
     justify-content: space-around;
 
-    min-width: 310rem;
-    max-width: 500rem;
+    min-width: 310px;
+    max-width: 500px;
     width: 85%;
     margin-top: var(--margin-top);
-    padding: 24rem 24rem 0 24rem;
+    padding: 24px 24px 0 24px;
     height: fit-content;
 
     background-color: whitesmoke;
-    border-radius: 12rem;
+    border-radius: 12px;
     box-shadow: 0 0 10px;
 }
 .up__infoBox{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 24rem;
+    margin-bottom: 24px;
 }
 .up__search{
     width: 100%;
     height: var(--search-height);
-    padding: 12rem 16rem 12rem 16rem;
+    padding: 12px 16px 12px 16px;
     
     color: var(--very-dark-gray);
     font-weight: 500;
     font-family: 'Rubik', sans-serif;
     font-size: var(--md);
     
-    border-radius: 12rem;
+    border-radius: 12px;
     border: none;
     box-shadow: var(--container-shadow);
 }
@@ -118,8 +118,8 @@ main{
 form{
     position:relative;
     width: 85%;
-    max-width: 500rem;
-    min-width: 310rem;
+    max-width: 500px;
+    min-width: 310px;
 }
 .up__btn{
     position: absolute;
@@ -130,15 +130,15 @@ form{
 
     background-color: black;
     border: none;
-    border-radius: 0 12rem 12rem 0;
+    border-radius: 0 12px 12px 0;
 }
 /* TIPOGRAFIA */
 .isp{
     text-align: center;
 }
 .up__title{
-    min-width: 310rem;
-    margin: 24rem 0 24rem;
+    min-width: 310px;
+    margin: 24px 0 24px;
 
     color: whitesmoke;
     font-size: var(--lg);
@@ -149,8 +149,8 @@ form{
     font-size: var(--sm);
     color: var(--dark-gray);
     font-weight: 700;
-    letter-spacing: 2rem;
-    margin-bottom: 8rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 .ip{
     word-break: break-all;
@@ -165,14 +165,14 @@ form{
 
 @media (min-width:1060px) {
     :root{
-        --margin-top:calc( (320rem - ( ( var(--title-margin) * 2 ) + var(--title-height) + var(--search-height))) / 3);;
+        --margin-top:calc( (320px - ( ( var(--title-margin) * 2 ) + var(--title-height) + var(--search-height))) / 3);;
     }
     body{
         background-image: url(./images/pattern-bg-desktop.png);
         background-size: 140%;
     }
     .up{
-        height: 280rem;
+        height: 280px;
     }
     .up__api{
         display: flex;
@@ -180,34 +180,34 @@ form{
         align-items: flex-start;
         justify-content: space-between;
 
-        min-width: 1099rem;
-        max-width: 1260rem;
+        min-width: 1099px;
+        max-width: 1260px;
         width: 70%;
         height: fit-content;
         max-width: none;
-        padding: 36rem 0rem 36rem;
+        padding: 36px 0px 36px;
     }
     .up__infoBox{
         align-items: start;
 
         margin: 0;
-        min-width: 250rem;
+        min-width: 250px;
         height: 100%;
-        padding-left:40rem;
+        padding-left:40px;
         border-right: 1px solid hsl(0, 0%, 59%);
     }
     .up__infoBox:last-child{
         border: none;
     }
     .up__infoData{
-        padding-top: 12rem;
-        padding-right: 20rem;
+        padding-top: 12px;
+        padding-right: 20px;
     }
     .up__infoTitle{
-        margin-bottom: 0rem;
+        margin-bottom: 0px;
     }
     .down{
-        height: calc(100vh - 280rem);
+        height: calc(100vh - 280px);
     }
     .isp, .ip{
         text-align: start;
